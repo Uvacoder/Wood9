@@ -47,7 +47,10 @@ showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
+//dot control
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
 //Table slides
 function showSlides(n) {
