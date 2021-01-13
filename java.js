@@ -49,6 +49,7 @@ function plusSlides(n) {
 }
 
 
+//Table slides
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -69,29 +70,97 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }  
 
-//Learning-Tower gallery
+//Tower Array Number change
+let radioRoughLumber = document.getElementById("flexRadioDefault1");
+let radioJointCut = document.getElementById("flexRadioDefault2");
+let radioDryAssembly = document.getElementById("flexRadioDefault3");
+let radioGlue = document.getElementById("flexRadioDefault4");
+let radioApproval= document.getElementById("flexRadioDefault5");
+let towerStartIndex = 0;
+let towerEndIndex = 0;
+let towerArr = [towerStartIndex, towerEndIndex];
+console.log(towerArr);
 
+radioRoughLumber.addEventListener('click', towerOne);
+radioJointCut.addEventListener('click', towerTwo);
+radioDryAssembly.addEventListener('click', towerThree);
+radioGlue.addEventListener('click', towerFour);
+radioApproval.addEventListener('click', towerFive);
+
+function removeTowerImages (){
+    while (learningTowerGallery.firstChild){
+    learningTowerGallery.removeChild(learningTowerGallery.firstChild);
+  }
+}
+
+//Filling the array
+function towerOne(){
+  removeTowerImages();
+  towerStartIndex=1;
+  towerEndIndex=2;
+  towerArr = [towerStartIndex, towerEndIndex];
+  fillingTowerImages();  
+}
+
+function towerTwo(){
+  removeTowerImages();
+  towerStartIndex=3;
+  towerEndIndex=4;
+  towerArr = [towerStartIndex, towerEndIndex];
+  fillingTowerImages();
+}
+
+function towerThree(){
+  removeTowerImages();
+  towerStartIndex=5;
+  towerEndIndex=14;
+  towerArr = [towerStartIndex, towerEndIndex];
+  fillingTowerImages();
+}
+
+function towerFour(){
+  removeTowerImages();
+  towerStartIndex=15;
+  towerEndIndex=17;
+  towerArr = [towerStartIndex, towerEndIndex];
+  fillingTowerImages();
+}
+
+function towerFive(){
+  removeTowerImages();
+  towerStartIndex=18;
+  towerEndIndex=18;
+  towerArr = [towerStartIndex, towerEndIndex];
+  fillingTowerImages();
+}
+
+
+//Learning-Tower gallery
 function generateTowerImages (){
   let towerImages = [];
-  for (let i=1; i <= 18; i++){
+  for (let i = towerArr[0]; i <= towerArr[1]; i++){
     towerImages.push(`./img/Learning Tower/IMG_${i}.jpg`);
     // console.log(towerImages);
   }
   return towerImages;
 }
 
-const imageUrls = generateTowerImages();
-console.log(imageUrls);
+// const imageUrls = generateTowerImages();
+// console.log(imageUrls);
 let learningTowerGallery = document.querySelector(".learning-gallery");
 
-for (let i=0; i <imageUrls.length; i++){
-  let createImg = document.createElement('img');
-  createImg.src= imageUrls[i];
-  learningTowerGallery.appendChild(createImg);
+function fillingTowerImages (){
+  const imageUrls = generateTowerImages();
+
+  for (let i=0; i <imageUrls.length; i++){
+    let createImg = document.createElement('img');
+    createImg.src= imageUrls[i];
+    learningTowerGallery.appendChild(createImg);
+  }
 }
 
-//Top Button
 
+//Back to Top Button
 topButton = document.getElementById("main-btn");
 window.onscroll = scrollFunction;
 
@@ -109,3 +178,5 @@ function topFunction() {
 }
 
 topButton.addEventListener('click', topFunction);
+
+
