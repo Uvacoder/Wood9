@@ -1,16 +1,13 @@
-/* body {
-    margin: 0 50px;
-} */
+.body-size {
+  padding: 0 20px;
+}
 
-nav {
+/* nav {
     display:flex;
     justify-content:space-between;
     margin: 20px 0;
 }
 
-/* .logo {
-    border: 1px solid black;
-} */
 
 .menu {
     display:flex;
@@ -20,11 +17,16 @@ nav {
 
 .menu > a {
     padding-left: 50px; 
-}
+} */
 
 .opening {
     display:none;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 0px;
 }
+
 
 /* .fader {
     transition: opacity 1s;
@@ -46,10 +48,20 @@ nav {
 } */
 
 #scroller-image {
-    display:block;
-    max-width: 250px;
+    padding: 30px;    
+    max-width: 350px;
+
 
 }
+
+#scroller-image-solid {
+    margin-top: 2em;
+    height: 600px;
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 container {
     padding: 10px;
@@ -57,8 +69,15 @@ container {
     width: 100%;
 }
 
+.image-size {
+  padding-top: 50px;
+  width: 600px;
+}
+
 hr {
-    
+ width: 70%;
+ margin-left: auto;
+ margin-right: auto;   
 }
 
 /* .section-1 {
@@ -158,7 +177,7 @@ hr {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: .2s;
+  animation-duration: .5s;
 }
 
 
@@ -166,6 +185,70 @@ hr {
   from {opacity: 1}
   to {opacity: 0}
 }
+
+.reverse-fade {
+  animation-name: reverse-fade;
+  animation-duration: 1s;
+}
+
+@keyframes reverse-fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.head-animation {
+  animation-name: head-animation;
+  animation-duration: 2s;
+}
+
+@keyframes head-animation {
+  from   {opacity: 0; transform: translateY(100px)}
+  to {opacity: 1; transform: translateY(0)}
+}
+
+.learning-gallery {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.learning-gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* * {
