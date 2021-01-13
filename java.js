@@ -47,6 +47,7 @@ showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
 //dot control
 function currentSlide(n) {
   showSlides(slideIndex = n);
@@ -159,6 +160,8 @@ function fillingTowerImages (){
     let createImg = document.createElement('img');
     createImg.src= imageUrls[i];
     learningTowerGallery.appendChild(createImg);
+    createImg.classList.add("zoom");
+    learningTowerGallery.classList.remove("zoom");
   }
 }
 
