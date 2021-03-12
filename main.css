@@ -31,14 +31,16 @@
 
 #scroller-image-solid {
     margin-top: 2em;
-    height: 400px;
+    height: 500px;
     align-items:center;
     display:flex;
     flex-direction: column;
     justify-content: center;
   }
 
-
+.project-subhead {
+    margin-top:55px;
+}
 
 
 .image-size {
@@ -48,6 +50,7 @@
 
 hr {
  width: 70%;
+ margin-top:70px;
  margin-left: auto;
  margin-right: auto;   
 }
@@ -128,6 +131,10 @@ hr {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+
+.dots-circle-carousel {
+  margin:20px;
 }
 
 .active, .dot:hover {
