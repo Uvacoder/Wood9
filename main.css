@@ -1,23 +1,10 @@
 .body-size {
   padding: 0 20px;
+  width: 90%;
+  margin-right:auto;
+  margin-left:auto;
 }
 
-/* nav {
-    display:flex;
-    justify-content:space-between;
-    margin: 20px 0;
-}
-
-
-.menu {
-    display:flex;
-    width: 100%;
-    justify-content:flex-end;
-}
-
-.menu > a {
-    padding-left: 50px; 
-} */
 
 .opening {
     display:none;
@@ -26,11 +13,6 @@
     position: relative;
     padding: 0px;
 }
-
-
-/* .fader {
-    transition: opacity 1s;
-} */
 
 .txt-centerizer {
     text-align: center;
@@ -41,33 +23,23 @@
     margin-right: auto;
     
 }
-/* #big-furniture {
-    margin-left: auto;
-    margin-right: auto;
-
-} */
 
 #scroller-image {
     padding: 30px;    
     max-width: 350px;
-
-
 }
 
 #scroller-image-solid {
     margin-top: 2em;
-    height: 600px;
+    height: 400px;
     align-items:center;
     display:flex;
     flex-direction: column;
     justify-content: center;
   }
 
-container {
-    padding: 10px;
-    display:inline-block;
-    width: 100%;
-}
+
+
 
 .image-size {
   padding-top: 50px;
@@ -80,23 +52,11 @@ hr {
  margin-right: auto;   
 }
 
-/* .section-1 {
-    background-color: coral;
-}
-
-.section-2 {
-    background-color: rgb(161, 150, 233);
-}
-.section-3 {
-    background-color:rgb(115, 137, 238) 
-} */
 
 .image-gallery-layout {
     display: flex;
     justify-content: space-around;
 }
-
-/* * {box-sizing:border-box} */
 
 /* Slideshow container */
 .slideshow-container {
@@ -206,6 +166,8 @@ hr {
   to {opacity: 1; transform: translateY(0)}
 }
 
+
+/*tower gallery layout*/
 .learning-gallery {
   max-width: 1000px;
   margin: auto;
@@ -214,12 +176,12 @@ hr {
   justify-content: center;
 }
 
+/*tower gallery pictures*/
 .learning-gallery img {
   width: 250px;
   height: 250px;
   object-fit: cover;
   margin: 10px;
-  /* cursor: pointer; */
 }
 
 
@@ -232,7 +194,7 @@ hr {
 }
 
 .footer-style {
-  height: 200px;
+  height: 150px;
   background-color:#26272b;
   display:flex;
   color: white;
@@ -247,13 +209,36 @@ hr {
 }
 
 .zoom {
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
 }
 
 .zoom:hover {
   transform: scale(1.5);
 }
 
+.wood-details {
+  margin:10px 0;
+  font-style: italic;
+}
+
+.wood-details p{
+  margin:0;
+}
+
+@media only screen and (min-width: 600px) {
+  #scroller-image-solid {
+    height: 600px;
+  }
+
+}
+
+@media only screen and (min-width: 1944px) {
+
+  .body-size {
+    width: 70%;
+  }
+
+}
 
 
 
@@ -262,12 +247,3 @@ hr {
 
 
 
-
-
-
-
-
-
-/* * {
-    border: solid black 2px;
-} */
